@@ -1,0 +1,8 @@
+branches:
+  only:
+    - master
+env:
+  - PATH=$PATH:terraform
+script:
+  - make
+  
