@@ -1,14 +1,19 @@
+provider "aws" {
+
+}
+
+
 module "networking" {
 	source = "./networking"
 
 	vpc_name = "cellpainting"
 }
 
-# module "security" {
-# 	source = "./security"
+module "security" {
+	source = "./security"
 
-# 	vpc_id = "${module.networking.vpc_default_id}"
-# }
+	vpc_id = "${module.networking.vpc_default_id}"
+}
 
 # module "db" {
 # 	source = "./db"
