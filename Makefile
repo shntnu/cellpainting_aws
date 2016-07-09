@@ -22,7 +22,7 @@ push: apply
 
 .PHONY: remote
 remote: terraform
-	terraform remote config -backend-config="bucket=imaging-platform-terraform-state-test" -backend-config="key=terraform.tfstate" -backend=s3
+	terraform remote config -backend-config="bucket=cellpainting-terraform-state-dev" -backend-config="key=terraform.tfstate" -backend=s3
 
 terraform: terraform_0.6.16_linux_amd64.zip
 	mkdir -p $@

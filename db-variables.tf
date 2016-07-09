@@ -1,5 +1,5 @@
 variable "identifier" {
-  default = "mydb-rds"
+  default = "cellpainting-rds"
   description = "Identifier for your DB"
 }
 
@@ -9,7 +9,7 @@ variable "storage" {
 }
 
 variable "engine" {
-  default = "postgres"
+  default = "mysql"
   description = "Engine type, example values mysql, postgres"
 }
 
@@ -27,12 +27,12 @@ variable "instance_class" {
 }
 
 variable "db_name" {
-  default = "mydb"
+  default = "cellpainting"
   description = "db name"
 }
 
 variable "db_username" {
-  default = "myuser"
+  default = "cpuser"
   description = "User name"
 }
 
