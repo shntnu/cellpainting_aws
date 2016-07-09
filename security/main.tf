@@ -1,7 +1,7 @@
 resource "aws_security_group" "default" {
   name = "main_rds_sg"
   description = "Allow all inbound traffic"
-  vpc_id = "${aws_vpc.cellpainting.id}"
+  vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port = 0
@@ -25,7 +25,7 @@ resource "aws_security_group" "default" {
 resource "aws_security_group" "ssh_http" {
   name        = "SSH_HTTP"
   description = "SSH and HTTP access"
-  vpc_id      = "${aws_vpc.cellpainting.id}"
+  vpc_id      = "${var.vpc_id}"
 
   # SSH access from anywhere
   ingress {

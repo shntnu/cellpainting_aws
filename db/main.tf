@@ -1,5 +1,4 @@
 resource "aws_db_instance" "default" {
-  depends_on              = ["aws_security_group.default"]
   identifier              = "${var.identifier}"
   allocated_storage       = "${var.storage}"
   engine                  = "${var.engine}"
@@ -8,12 +7,14 @@ resource "aws_db_instance" "default" {
   name                    = "${var.db_name}"
   username                = "${var.db_username}"
   password                = "${var.db_password}"
-  vpc_security_group_ids  = ["${aws_security_group.default.id}"]
+  vpc_security_group_ids  = ["${security_group_id}"]
   db_subnet_group_name    = "${aws_db_subnet_group.default.id}"
 }
 
 resource "aws_db_subnet_group" "default" {
   name                    = "main_subnet_group"
   description             = "Our main group of subnets"
-  subnet_ids              = ["${aws_subnet.subnet_1_private.id}", "${aws_subnet.subnet_2_private.id}"]
+  subnet_ids              = ["${subnet_1_private_id}", "${subnet_2_private_id}"]
 }
+
+

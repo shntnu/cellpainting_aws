@@ -22,3 +22,5 @@ variable "az_2" {
   default = "us-east-1b"
   description = "Your Az2, use AWS CLI to find your account specific"
 }
+
+variable "vpc_name" {}

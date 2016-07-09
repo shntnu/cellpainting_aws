@@ -1,3 +1,5 @@
+variable "security_group_id" {}
+
 variable "identifier" {
   default = "cellpainting-rds"
   description = "Identifier for your DB"
@@ -39,3 +41,10 @@ variable "db_username" {
 variable "db_password" {
   description = "password, provide through your ENV variables"
 }
+
+variable "security_group_id"   {}
+
+variable "subnet_1_private_id" {}
+
+variable "subnet_2_private_id" {}
+
