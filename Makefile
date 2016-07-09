@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := push
 
 .PHONY: apply
-apply: pull
+apply: get
 	terraform apply
 
 .PHONY: clean
@@ -11,6 +11,10 @@ clean:
 .PHONY: destroy
 destroy:
 	terraform destroy
+
+.PHONY: get
+get: pull
+	terraform get
 
 .PHONY: pull
 pull: remote
