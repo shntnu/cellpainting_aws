@@ -1,5 +1,3 @@
-variable "security_group_id" {}
-
 variable "identifier" {
   default = "cellpainting-rds"
   description = "Identifier for your DB"
