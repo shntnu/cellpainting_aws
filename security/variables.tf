@@ -8,4 +8,4 @@ variable "sg_name" {
   description = "Tag Name for sg"
 }
 
-variable vpc_id {}
+variable "vpc_id" {}

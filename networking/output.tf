@@ -11,5 +11,5 @@ output "subnet_1_public_id" {
 }
 
 output "vpc_default_id" {
-  value = "{aws_vpc.default.id}"
+  value = "${aws_vpc.default.id}"
 }
