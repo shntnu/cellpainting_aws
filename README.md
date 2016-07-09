@@ -9,4 +9,3 @@ This example provides sample configuration for creating a mysql or postgres inst
 The example creates db subnet groups and a VPC security group as inputs to the instance creation
 
 Several parameters are externalized, review the different variables.tf files and change them to fit your needs. Carefully review the CIDR blocks, egress/ingress rules, availability zones that are very specific to your account.
-
