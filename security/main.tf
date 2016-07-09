@@ -51,3 +51,25 @@ resource "aws_security_group" "ssh_http" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_security_group" "nfs" {
+  name        = "NFS"
+  description = "NFS access"
+  vpc_id      = "${var.vpc_id}"
+
+  # NFS access from anywhere
+  ingress {
+    from_port   = 2049
+    to_port     = 2049
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # outbound internet access
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
