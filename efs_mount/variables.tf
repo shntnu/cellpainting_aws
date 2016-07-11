@@ -1,4 +1,4 @@
-variable "efs_name" {}
+variable "efs_id" {}
 
 variable "subnet_1_private_id" {}
 
