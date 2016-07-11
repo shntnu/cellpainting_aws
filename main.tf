@@ -21,7 +21,7 @@ module efs_mount {
 	# EFS resource should be created ahead of time. 
 	# We avoid using terraform to create this resource to avoid 
 	# accidental deletion
-	efs_id = "fs-1ebb7f57"
+	efs_id = "fs-3609f37f"
 
 	subnet_1_private_id = "${module.networking.subnet_1_private_id}"
 

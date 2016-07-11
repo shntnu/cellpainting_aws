@@ -1,6 +1,6 @@
 resource "aws_security_group" "default" {
-  name = "main_rds_sg"
-  description = "Allow all inbound traffic"
+  name = "RDS"
+  description = "RDS access"
   vpc_id = "${var.vpc_id}"
 
   ingress {
@@ -18,7 +18,7 @@ resource "aws_security_group" "default" {
   }
 
   tags {
-    Name = "${var.sg_name}"
+    Name = "RDS"
   }
 }
 
@@ -50,6 +50,10 @@ resource "aws_security_group" "ssh_http" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  tags {
+    Name = "SSH_HTTP"
+  }
 }
 
 resource "aws_security_group" "nfs" {
@@ -71,5 +75,9 @@ resource "aws_security_group" "nfs" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags {
+    Name = "NFS"
   }
 }

@@ -16,6 +16,10 @@ destroy:
 get: pull
 	terraform get
 
+.PHONY: plan
+plan: get
+	terraform plan
+
 .PHONY: pull
 pull: remote
 	terraform remote pull
