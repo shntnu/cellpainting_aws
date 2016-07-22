@@ -14,7 +14,7 @@ resource "aws_db_instance" "default" {
 resource "aws_db_subnet_group" "default" {
   name                    = "main_subnet_group"
   description             = "Our main group of subnets"
-  subnet_ids              = ["${subnet_1_private_id}", "${subnet_2_private_id}"]
+  subnet_ids              = ["${var.subnet_1_private_id}", "${var.subnet_2_private_id}"]
 }
 
 
