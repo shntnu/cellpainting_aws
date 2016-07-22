@@ -33,7 +33,7 @@ module efs_mount {
 module "db" {
 	source = "./db"
 
-	security_group_id   = "${module.security.security_group_rds_id}"
+	security_group_id   = "${module.security.security_group_default_id}"
 
 	subnet_1_private_id = "${module.networking.subnet_1_private_id}"
 

@@ -1,5 +1,5 @@
-output "security_group_rds_id" {
-  value = "${aws_security_group.rds.id}"
+output "security_group_default_id" {
+  value = "${aws_security_group.default.id}"
 }
 
 output "security_group_ssh_http_id" {
