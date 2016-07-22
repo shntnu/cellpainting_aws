@@ -1,4 +1,4 @@
-resource "aws_security_group" "default" {
+resource "aws_security_group" "rds" {
   name = "RDS"
   description = "RDS access"
   vpc_id = "${var.vpc_id}"
