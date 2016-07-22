@@ -30,16 +30,16 @@ module efs_mount {
 	nfs_security_group  = "${module.security.security_group_nfs_id}"
 }
 
-module "db" {
-	source = "./db"
+# module "db" {
+# 	source = "./db"
 
-	security_group_id   = "${module.security.security_group_default_id}"
+# 	security_group_id   = "${module.security.security_group_default_id}"
 
-	subnet_1_private_id = "${module.networking.subnet_1_private_id}"
+# 	subnet_1_private_id = "${module.networking.subnet_1_private_id}"
 
-	subnet_2_private_id = "${module.networking.subnet_2_private_id}"
+# 	subnet_2_private_id = "${module.networking.subnet_2_private_id}"
 
-	db_password = "${db_password}"
-}
+# 	db_password = "${db_password}"
+# }
 
 
