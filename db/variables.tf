@@ -4,7 +4,7 @@ variable "identifier" {
 }
 
 variable "storage" {
-  default = "10"
+  default = "100"
   description = "Storage size in GB"
 }
 
@@ -22,7 +22,7 @@ variable "engine_version" {
 }
 
 variable "instance_class" {
-  default = "db.t2.micro"
+  default = "db.m4.large"
   description = "Instance class"
 }
 
