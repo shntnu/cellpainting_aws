@@ -37,4 +37,4 @@ terraform: terraform_0.8.4_linux_amd64.zip
 	unzip $< -d $@
 
 terraform_0.8.4_linux_amd64.zip:
-	wget https://releases.hashicorp.com/terraform/0.8.4/$@
+	wget --no-check-certificate https://releases.hashicorp.com/terraform/0.8.4/$@
