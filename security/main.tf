@@ -56,6 +56,40 @@ resource "aws_security_group" "ssh_http" {
   }
 }
 
+resource "aws_security_group" "ssh_http_anywhere" {
+  name        = "SSH_HTTP_ANYWHERE"
+  description = "SSH and HTTP access from anywhere"
+  vpc_id      = "${var.vpc_id}"
+
+  # SSH access from anywhere
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # HTTP access from the VPC
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # outbound internet access
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags {
+    Name = "SSH_HTTP_ANYWHERE"
+  }
+}
+
 resource "aws_security_group" "nfs" {
   name        = "NFS"
   description = "NFS access"
