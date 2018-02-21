@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/shntnu/cellpainting_aws.svg?branch=master)](https://travis-ci.org/shntnu/cellpainting_aws)
-
 # AWS infrastructure for Cell Painting 
 
 ## How to avoid accidental deletion of resources
